@@ -12,12 +12,25 @@ class TodoController extends Controller
         return response()->json($data);
     }
 
+    public function get($id){
+        $data = todo::where('id', $id)->first();
+        return response()->json($data);
+    }
+
     public function insert(Request $req){
         $data = new todo();
         $data->name = $req->name;
         $data->descrip = $req->descrip;
         $data->save();
         return response()->json($data, 201);
+    }
+
+    public function update(Request $req, $id){
+        $data = todo::where('id', $id)->first();
+        $data->name = $req->name;
+        $data->descrip = $req->descrip;
+        $data->save();
+        return response()->json($data, 200);
     }
 
     public function delete($id){
