@@ -1,7 +1,12 @@
+import {useState, useEffect} from 'react';
 import './App.css';
+import Promotions from './Promotions';
 
 function App() {
-  return;
+  return <div>
+    <Promotions/>
+    
+  </div>
 }
 
 export default App;
