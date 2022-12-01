@@ -5,8 +5,8 @@ import Promotions from './Promotions';
 
 function App() {
   return <div>
-    <Briefs/>
-    {/* <Promotions/> */}
+    <Promotions/>
+    {/* <Briefs/> */}
     
   </div>
 }

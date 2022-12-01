@@ -1,8 +1,8 @@
 import { useState } from '@hookstate/core';
 import axios from 'axios';
 import React, { useEffect } from 'react';
-import Input from './Input';
-import usePromState from './promState';
+import Input from '../Input';
+import usePromState from '../Promotion/promState';
 
 export default function EditModal(p) {
     const [form, setForm] = React.useState({});
