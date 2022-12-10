@@ -1,0 +1,66 @@
+<script>
+    import Input from "../Input.svelte";
+    import Fa from "svelte-fa";
+    import { faXmark } from "@fortawesome/free-solid-svg-icons";
+    import { beforeUpdate, onMount } from "svelte";
+    import axios from "axios";
+    import { url } from "../../URL";
+    import { get, writable } from "svelte/store";
+    import ModalBody from "./ModalBody.svelte";
+
+    export let open;
+    export let store;
+    export let inputs;
+    export let width;
+    export let table;
+
+    let formData = writable({});
+
+    const handleAdd = async () => {
+        const res = await axios.post(url() + table, $formData);
+        if (res) {
+            formData.set(res.data);
+            store.add(res.data);
+        }
+        console.log(res);
+    };
+
+    const closeModal = () => {
+        open.set({ hidden: true, id: null });
+        formData.set({});
+    };
+</script>
+
+<ModalBody {open} {width} {formData}>
+    <div slot="content">
+        <h1 class="w-full flex justify-center text-3xl pb-4">
+            Edit {inputs().table}
+        </h1>
+        <form
+            on:submit|preventDefault={handleAdd}
+            class="w-full flex flex-wrap justify-between"
+        >
+            {#each inputs().fields as inp}
+                <Input
+                    label={inp.label}
+                    type={inp.type}
+                    name={inp.name}
+                    bind:value={$formData[inp.name]}
+                    placeholder={inp.placeholder}
+                    width={inp.width}
+                />
+            {/each}
+            <div class="w-full flex justify-end gap-1 mt-2">
+                <button
+                    type="submit"
+                    class="bg-green-700 text-white rounded-md px-3 py-1"
+                    >Add</button
+                >
+                <button
+                    class="bg-red-700 text-white rounded-md px-3 py-1"
+                    on:click={closeModal}>Cancel</button
+                >
+            </div>
+        </form>
+    </div>
+</ModalBody>

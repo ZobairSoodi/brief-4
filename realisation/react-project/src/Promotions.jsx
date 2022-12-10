@@ -14,7 +14,7 @@ export default function Promotions() {
     const [addModal, setAddModal] = React.useState({ show: false });
 
     return (
-        <div>
+        <div className='flex flex-col justify-center items-center w-full'>
             <button onClick={() => { setAddModal({ show: true }) }}>Add New</button>
             <Show
                 url={MyURL + "/promotions/"}

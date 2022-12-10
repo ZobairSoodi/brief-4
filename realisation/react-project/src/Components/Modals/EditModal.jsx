@@ -62,8 +62,8 @@ export default function EditModal(p) {
                             
                         />
                     )}
-                <button onClick={save} type='submit'>Save</button>
-                <button onClick={closeModal}>Close</button>
+                <button onClick={save} type='submit' className='bg-lime-800'>Save</button>
+                <button onClick={closeModal} className='bg-red-800'>Close</button>
             </form>
 
         </div>
