@@ -28,7 +28,7 @@
         on:keyup={handleESC}
     >
         <div
-            class="{width} flex flex-col px-12 py-10 rounded-lg relative bg-white"
+            class="{width} flex flex-col px-12 py-10 rounded-sm relative bg-white"
         >
             <slot name="content" />
             <button

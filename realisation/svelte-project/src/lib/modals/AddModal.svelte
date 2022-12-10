@@ -34,7 +34,7 @@
 <ModalBody {open} {width} {formData}>
     <div slot="content">
         <h1 class="w-full flex justify-center text-3xl pb-4">
-            Edit {inputs().table}
+            Add {inputs().table}
         </h1>
         <form
             on:submit|preventDefault={handleAdd}
@@ -50,14 +50,17 @@
                     width={inp.width}
                 />
             {/each}
-            <div class="w-full flex justify-end gap-1 mt-2">
+            <div
+                class="w-full flex justify-center gap-1 mt-3"
+                style="font-family: 'Calibri, 'Trebuchet MS', sans-serif;"
+            >
                 <button
                     type="submit"
-                    class="bg-green-700 text-white rounded-md px-3 py-1"
+                    class="bg-[#296db0] min-w-[80px] text-white font-medium rounded-sm px-3 py-1"
                     >Add</button
                 >
                 <button
-                    class="bg-red-700 text-white rounded-md px-3 py-1"
+                    class="bg-[#100f0f] min-w-[80px] text-white font-medium rounded-sm px-3 py-1"
                     on:click={closeModal}>Cancel</button
                 >
             </div>
