@@ -15,7 +15,7 @@
     let openAdd = writable({ hidden: true, id: null });
 </script>
 
-<div class="w-full">
+<div class="w-11/12">
     <h1>Promotions</h1>
     <Open openModal={openAdd} btn_text="Add New" />
     <div class="w-full flex justify-center">
@@ -63,7 +63,7 @@
         store={promStore}
         table="promotions"
         inputs={promInputs}
-        width="w-11/12 md:w-3/4 lg:w-1/2"
+        width="w-11/12 md:w-3/4 lg:w-6/12"
     />
     <EditModal
         open={openEdit}

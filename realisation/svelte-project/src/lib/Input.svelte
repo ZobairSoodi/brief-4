@@ -6,7 +6,7 @@
     export let placeholder = "";
     export let value = "";
     export let width = "";
-    let inp_class = "w-full h-10 rounded-md border-2 border-gray-300 p-1";
+    let inp_class = "w-full h-10 rounded-sm border-2 border-gray-300 p-1 mt-1";
 
     const handleInput = (e) => {
         value = e.target.value;

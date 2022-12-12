@@ -11,7 +11,7 @@
     export let open;
     export let store;
     export let inputs;
-    export let width;
+    export let width = "w-11/12 md:w-3/4 lg:w-6/12";
     export let table;
 
     let formData = writable({});
@@ -64,7 +64,7 @@
                     width={inp.width}
                 />
             {/each}
-            <div class="w-full flex justify-center gap-1 mt-3"
+            <div class="w-full flex justify-center gap-1 mt-6"
                 style="font-family: 'Calibri, 'Trebuchet MS', sans-serif;"
             >
                 <button

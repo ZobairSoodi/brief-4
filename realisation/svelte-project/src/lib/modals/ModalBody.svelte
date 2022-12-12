@@ -4,7 +4,7 @@
     import { get, writable } from "svelte/store";
 
     export let open;
-    export let width;
+    export let width = "w-11/12 md:w-3/4 lg:w-6/12";
 
     export let formData;
 
@@ -28,7 +28,7 @@
         on:keyup={handleESC}
     >
         <div
-            class="{width} flex flex-col px-12 py-10 rounded-sm relative bg-white"
+            class="{width} flex flex-col px-16 py-10 rounded-sm relative bg-white"
         >
             <slot name="content" />
             <button
