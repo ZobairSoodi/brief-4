@@ -14,6 +14,7 @@ class BriefController extends Controller
 
     public function get($id_br){
         $data = brief::where('id_br', $id_br)->first();
+        $data->tasks;
         return response()->json($data);
     }
 
@@ -26,6 +27,9 @@ class BriefController extends Controller
     public function get_with_stu($id_br){
         $data = brief::where('id_br', $id_br)->first();
         $data->students;
+        foreach ($data->students as $student) {
+            $student->tasks;
+        }
         return response()->json($data);
     }
 

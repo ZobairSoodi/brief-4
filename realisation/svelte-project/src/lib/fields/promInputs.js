@@ -23,42 +23,6 @@ export function promInputs() {
                 label: "Description",
                 width: half,
             },
-            {
-                element: "input",
-                type: "text",
-                name: "name_prom",
-                id: "name_prom",
-                placeholder: "Enter Promotion Name",
-                label: "Name",
-                width: full,
-            },
-            {
-                element: "input",
-                type: "text",
-                name: "descrip_prom",
-                id: "descrip_prom",
-                placeholder: "Enter Promotion Description",
-                label: "Description",
-                width: full,
-            },
-            {
-                element: "input",
-                type: "text",
-                name: "name_prom",
-                id: "name_prom",
-                placeholder: "Enter Promotion Name",
-                label: "Name",
-                width: half,
-            },
-            {
-                element: "input",
-                type: "text",
-                name: "descrip_prom",
-                id: "descrip_prom",
-                placeholder: "Enter Promotion Description",
-                label: "Description",
-                width: half,
-            },
         ]
     }
 }

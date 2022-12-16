@@ -17,4 +17,8 @@ class task extends Model
     public function brief(){
         return $this->belongsTo(brief::class, 'id_br', 'id_br');
     }
+
+    public function students(){
+        return $this->belongsToMany(student::class, 'student_task', 'id_task', 'id_stu')->withPivot("state");
+    }
 }

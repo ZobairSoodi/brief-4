@@ -17,7 +17,6 @@
 
 <div class="w-11/12">
     <h1>Promotions</h1>
-    <Open openModal={openAdd} btn_text="Add New" />
     <div class="w-full flex justify-center">
         <Show
             {openEdit}

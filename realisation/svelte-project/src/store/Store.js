@@ -15,3 +15,4 @@ function GlobalStore(table_id) {
 export const promStore = GlobalStore("id_prom");
 export const stuStore = GlobalStore("id_stu");
 export const brStore = GlobalStore("id_br");
+export const taskStore = GlobalStore("id_task");
