@@ -80,7 +80,8 @@
     <span class="text-xl mr-5">Progress </span>
     <div class="w-1/2 h-8 bg-gray-400">
         <div
-            class="w-[{percentage + '%'}] h-8 flex justify-center items-center text-white bg-green-700"
+            class="h-8 flex justify-center items-center bg-green-600"
+            style="width: {percentage + '%'}"
         >
             {percentage}%
         </div>
